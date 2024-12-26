@@ -1,56 +1,115 @@
-/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #161F28;
+    --secondary-color: #DEE1E3;
+    --third-color: #FFA500;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    scroll-behavior: smooth;
+}
+main, header {
+    background-color: var(--secondary-color);
+}
+main {
+    padding: 2vh 5vw;
+}
+.main-title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    
+    color: transparent;
+    background-image: linear-gradient(to right, var(--secondary-color), var(--third-color)); /* Border color using gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    border: 3px solid #FFA500;
+    padding: 10px;
+
+    border-radius: 5px;
+}
+nav {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 2vh 0;
 }
 
-/* Header */
-header {
-    background-color: #003366;
-    color: white;
-    padding: 20px;
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 2vw;
+    border: var(--third-color) 1px solid;
+    border-radius: 10px;
+    padding: 1vh;
+    transition: all 0.5s ease;
+}
+nav ul li:hover{
+    background-color: var(--third-color);
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+article {
+    border-radius: 20px;
+    border: var(--third-color) 2px solid;
+    background-color: var(--primary-color);
+    margin-bottom: 5vh;
+    padding: 1rem;
+}
+h2 {
     text-align: center;
 }
-
-header a {
-    color: #99ccff;
-    font-size: 18px;
-    margin-top: 5px;
-}
-
-header a:hover {
-    color: #66b3ff;
-}
-
-/* Content */
-main {
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
-ol {
-    list-style-type: decimal;
-    padding-left: 20px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 40px;
-    font-size: 18px;
-}
-
 /* Footer */
 footer {
-    background-color: #003366;
-    color: white;
-    padding: 10px;
+    color: #ecf0f1; 
     text-align: center;
-    margin-top: 30px;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    font-size: 14px; 
+    line-height: 1.5; 
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1vw;
+}
+article.video {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1vw;
+}
+.video-player {
+    width: 30vw;
+}
+.disclaimer {
+    font-size: 12px;
+    font-style: italic;
+}
+.video-description {
+    padding: 2vh 0;
+}
+.video-description::first-letter {
+    margin-left: 1vw;
+    font-size: 40px;
 }

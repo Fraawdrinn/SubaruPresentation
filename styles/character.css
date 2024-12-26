@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #161F28;
+    --secondary-color: #DEE1E3;
+    --third-color: #FFA500;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    scroll-behavior: smooth;
+}
+main, header {
+    background-color: var(--secondary-color);
+}
+main {
+    padding: 2vh 5vw;
+}
+.main-title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    
+    color: transparent;
+    background-image: linear-gradient(to right, var(--secondary-color), var(--third-color)); /* Border color using gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    border: 3px solid #FFA500;
+    padding: 10px;
+
+    border-radius: 5px;
+}
+nav {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 2vh 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 2vw;
+    border: var(--third-color) 1px solid;
+    border-radius: 10px;
+    padding: 1vh;
+    transition: all 0.5s ease;
+}
+nav ul li:hover{
+    background-color: var(--third-color);
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+article {
+    border-radius: 20px;
+    border: var(--third-color) 2px solid;
+    background-color: var(--primary-color);
+    margin-bottom: 5vh;
+    padding: 1rem;
+}
+h2 {
+    text-align: center;
+}
+/* Footer */
+footer {
+    color: #ecf0f1; 
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    font-size: 14px; 
+    line-height: 1.5; 
+}
+
+/* Main */
+img {
+    width: 100px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+tr:nth-child(odd) {
+    background-color: #181230;
+}
+td:nth-child(2) {
+    text-decoration: underline;
+}
